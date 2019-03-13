@@ -1,0 +1,14 @@
+.navbar{
+	background-color: #000000;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+      color: black !important;
+      background-color: #fff !important;
+}
+.jumbotron{
+	text-align: center;
+}
+
+.jumbotron h2{
+	padding-top: 35px;
+}
