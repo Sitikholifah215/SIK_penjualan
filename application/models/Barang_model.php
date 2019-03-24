@@ -22,7 +22,8 @@ class Barang_model extends CI_Model {
 				'kd_barang' =>$this->input->post('kd_barang'),
 				'nama_barang' =>$this->input->post('nama_barang'),
 				'satuan' =>$this->input->post('satuan'),
-				'harga/satuan'=>$this->post->post('harga/satuan'));
+				'harga'=>$this->input->post('harga')
+			);
 
 	$this->db->insert('barang', $object);
 	}

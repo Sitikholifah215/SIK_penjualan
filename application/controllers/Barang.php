@@ -31,18 +31,32 @@ class Barang extends CI_Controller {
 		$this->form_validation->set_rules('kd_barang', 'kd_barang', 'trim|required');
         $this->form_validation->set_rules('nama_barang', 'nama_barang', 'trim|required');
         $this->form_validation->set_rules('satuan', 'satuan', 'trim|required');
-        $this->form_validation->set_rules('harga/satuan', 'harga/satuan', 'trim|required');
+        $this->form_validation->set_rules('harga', 'harga', 'trim|required');
 
         $this->load->model('Barang_model');
 
         if($this->form_validation->run()==FALSE)
         {
-            $this->load->view('barang/barang');
+            $this->load->view('barang/insert_barang');
         }
         else
         {
         $this->Barang_model->insert_brg();
         $this->load->view('homepage.php');
     	}
+    	$this->load->view('footer');
+	}
+
+	public function data_serverBarang(){
+		$this->load->library('Datatables');
+		$this->datatables
+			->select('kd_barang, nama_barang, satuan, harga')
+			->from('barang');
+			echo $this->datatables->generate();
+	}
+	public function view_barang(){
+		$this->load->view('header');
+		$this->load->view('barang/view_barang');
+		$this->load->view('footer');
 	}
 }

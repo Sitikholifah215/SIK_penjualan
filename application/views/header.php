@@ -42,7 +42,7 @@
                     <li><a href="<?=site_url()?>/home/" ><span class=" glyphicon glyphicon-home"></span> Beranda</a></li>                    
                     <li><a href="<?=site_url()?>/tranksaksi/insert_transaksi" ><span class=" glyphicon glyphicon-picture"></span> Tranksaksi</a></li>
                     <li><a href="<?=site_url()?>/tranksaksi/detail_transaksi" ><span class=" glyphicon glyphicon-picture"></span> Detail Tranksaksi</a></li>
-                    <li><a href="<?=site_url()?>/barang/insert_barang" ><span class=" glyphicon glyphicon-user"></span> Barang </a></li>
+                    <li><a href="<?=site_url()?>/barang/view_barang" ><span class=" glyphicon glyphicon-user"></span> Barang </a></li>
                     <!-- <li><a href="<?=site_url()?>/welcome/berita" ><span class=" glyphicon glyphicon-globe"></span> </a></li> -->
                     <li><a  href="#" ><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>  
                 </ul>
